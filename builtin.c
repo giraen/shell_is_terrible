@@ -10,5 +10,5 @@ void builtin_banner(char **args) {
 }
 
 void builtin_cd(char **args) {
-    
+    _chdir(args[1]);
 }

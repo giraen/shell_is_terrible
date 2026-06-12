@@ -41,7 +41,7 @@ void execute_input(char **args) {
     
     // Check if the command is a builtin command
     for (int i = 0; i < sizeof(g_builtins)/sizeof(t_builtin); i++) {
-        if (strcmp(args[0], g_builtins[i].name) == 0) {
+        if (strcmp(args[0], g_builtins[i].builtin_name) == 0) {
             g_builtins[i].func(args);
             return;
         }

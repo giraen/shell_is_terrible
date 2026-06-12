@@ -18,7 +18,7 @@
 #include <time.h>
 
 typedef struct s_builtin {
-    const char *name;
+    const char *builtin_name;
     void (*func)(char **);
 } t_builtin;
 
