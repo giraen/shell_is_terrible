@@ -12,19 +12,21 @@ char* create_prompt() {
     }
 
     // Allocate size for the cwd and the '$>' prompt
-    size_t prompt_size = strlen(cwd) + 14;
+    size_t prompt_size = strlen(cwd) + 65;
     char* p = calloc(prompt_size, 1);
 
     // Combine them
-    strcat(p, BLE);
+    strcat(p, CWD_COLOR);
     strcat(p, cwd);
-    strcat(p, RST);
+    strcat(p, PROMPT_COLOR);
     strcat(p, " $> ");
+    strcat(p, FG_COLOR);
 
     return p;
 }
 
 void print_banner() {
+    printf("%s", BG_COLOR);
     system("cls");
     
     time_t today = time(NULL);

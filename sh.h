@@ -4,10 +4,11 @@
 #define BUFFER_SIZE 256
 
 #define RST "\x1b[0m"
-#define RED "\x1b[31m"
-#define GRN "\x1b[32m"
-#define YLW "\x1b[33m"
-#define BLE "\x1b[34m"
+#define RED "\x1b[38;2;237;135;150m"
+#define PROMPT_COLOR "\x1b[38;2;198;160;246m"
+#define CWD_COLOR "\x1b[38;2;63;185;80m"
+#define BG_COLOR "\x1b[38;2;36;39;58m"
+#define FG_COLOR "\x1b[38;2;202;211;245m"
 
 #include <string.h>
 #include <stdlib.h>
